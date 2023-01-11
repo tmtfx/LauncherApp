@@ -35,7 +35,7 @@ App::RefsReceived(BMessage* message)
 		out << path.Path();
 		out.close();*/
 		std::stringstream stream;
-		stream << "/bin/python /boot/home/config/non-packaged/bin/HaiPO "<< path.Path();
+		stream << "/bin/python /boot/home/config/non-packaged/bin/HaiPO "<< path.Path()<<" &";
 		system(stream.str().c_str());
 		}
 	be_app->PostMessage(B_QUIT_REQUESTED);
